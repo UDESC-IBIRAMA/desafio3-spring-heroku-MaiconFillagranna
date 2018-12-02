@@ -1,0 +1,142 @@
+{
+	"info": {
+		"_postman_id": "6d776a7b-f62f-4ab4-8319-880194e65a16",
+		"name": "Vehicle",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "automaker",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\" : \"Fabricante 2\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8090/automaker",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"automaker"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "model",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\" : \"Modelo 2\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8090/model",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"model"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "vehicle",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\" : \"Gol\",\n\t\"type\" : \"CAR\",\n\t\"color\" : \"Azul\",\n\t\"kilometer\" : \"100\",\n\t\"motor\" : 1.6,\n\t\"value\" : 100,\n\t\"automaker\" : { \"id\" : \"9771ba8b-183a-4e5c-adc2-e0dbba36da31\" },\n\t\"model\" : { \"id\" : \"c42d7455-1d10-4907-8c13-95da562343bf\" }\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8090/vehicle",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"vehicle"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "vehicle/search",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\" : \"Gol\",\n\t\"type\" : \"CAR\",\n\t\"searchType\" : \"MOTOR_GREATER_THAN\",\n\t\"automakerName\" : \"Fabricante\",\n\t\"modelName\" : \"Model\",\n\t\"color\" : \"Azul\",\n\t\"kilometer\" : 100,\n\t\"motor\" : 1.0,\n\t\"value\" : 100\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8090/vehicle/search",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"vehicle",
+						"search"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
