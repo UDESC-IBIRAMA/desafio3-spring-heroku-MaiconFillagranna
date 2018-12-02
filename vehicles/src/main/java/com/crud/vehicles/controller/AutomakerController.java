@@ -14,11 +14,13 @@ public class AutomakerController {
     @Autowired
     private AutomakerRepository repository;
 
+    @CrossOrigin(origins = "", allowedHeaders = "")
     @RequestMapping(method = {RequestMethod.POST, RequestMethod.PUT})
     public AutomakerEntity save(@RequestBody AutomakerEntity entity) {
         return repository.save(entity);
     }
-
+    
+    @CrossOrigin(origins = "", allowedHeaders = "")
     @GetMapping
     public List<AutomakerEntity> list() {
         return repository.findAll();

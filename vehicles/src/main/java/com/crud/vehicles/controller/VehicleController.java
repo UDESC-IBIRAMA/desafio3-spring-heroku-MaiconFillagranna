@@ -18,16 +18,19 @@ public class VehicleController {
     @Autowired
     private VehicleRepository repository;
 
+    @CrossOrigin(origins = "", allowedHeaders = "")
     @RequestMapping(method = {RequestMethod.POST, RequestMethod.PUT})
     private VehicleEntity save(@RequestBody VehicleEntity entity) {
         return repository.save(entity);
     }
 
+    @CrossOrigin(origins = "", allowedHeaders = "")
     @GetMapping
     private List<VehicleEntity> list() {
         return repository.findAll();
     }
 
+    @CrossOrigin(origins = "", allowedHeaders = "")
     @GetMapping(path = "/search")
     private List<VehicleEntity> search(@RequestBody SearchInput request) {
         Stream<VehicleEntity> list = repository.findAll().stream();

@@ -14,11 +14,13 @@ public class ModelController {
     @Autowired
     private ModelRepository repository;
 
+    @CrossOrigin(origins = "", allowedHeaders = "")
     @RequestMapping(method = {RequestMethod.POST, RequestMethod.PUT})
     private ModelEntity save(@RequestBody ModelEntity entity) {
         return repository.save(entity);
     }
 
+    @CrossOrigin(origins = "", allowedHeaders = "")
     @GetMapping
     private List<ModelEntity> list() {
         return repository.findAll();
