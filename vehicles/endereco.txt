@@ -1,1 +1,10 @@
 https://dry-ravine-79972.herokuapp.com/
+
+https://dry-ravine-79972.herokuapp.com/automaker
+
+https://dry-ravine-79972.herokuapp.com/model
+
+https://dry-ravine-79972.herokuapp.com/vehicle
+
+https://dry-ravine-79972.herokuapp.com/vehicle/search
+
